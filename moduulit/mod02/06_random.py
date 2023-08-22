@@ -1,0 +1,10 @@
+import random
+k3numero1 = random.randint(0, 9)
+k3numero2 = random.randint(0, 9)
+k3numero3 = random.randint(0, 9)
+k4numero1 = random.randint(1, 6)
+k4numero2 = random.randint(1, 6)
+k4numero3 = random.randint(1, 6)
+k4numero4 = random.randint(1, 6)
+print("kolminumeroinen koodi numerovälillä 0-9: " + str(k3numero1) + str(k3numero2) + str(k3numero3))
+print("nelinumeroinen koodi numerovälillä 1-6: " + str(k4numero1) + str(k4numero2) + str(k4numero3) + str(k4numero4))

@@ -1,0 +1,10 @@
+leiviska = input('anna leiviskät: ')
+naula = input('anna naulat: ')
+luoti = input('anna luodit: ')
+leiviskaf = float(leiviska)
+naulaf = float(naula)
+luotif = float(luoti)
+gramma = 13.3*(luotif+(32*naulaf)+(32*20*leiviskaf))
+kilogramma = gramma//1000
+vitunscuffedgrammat = gramma-(kilogramma*1000)
+print(f"Massa nykymittojen mukaan:\n{kilogramma:.0f}kg ja {vitunscuffedgrammat:.2f}g")
