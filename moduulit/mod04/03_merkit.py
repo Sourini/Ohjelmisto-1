@@ -1,7 +1,7 @@
 luku = input('anna luku:')
 pienin = float(luku)
 suurin = float(luku)
-while suurin >= pienin:
+while True:
     luku = input('anna uusi luku:')
     if luku == "":
         break
@@ -13,3 +13,4 @@ while suurin >= pienin:
         suurin = luku
 
 print(f'suurin antamasi luku oli {suurin} ja pienin oli {pienin}')
+
