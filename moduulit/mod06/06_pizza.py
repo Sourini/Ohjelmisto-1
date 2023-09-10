@@ -5,7 +5,6 @@
 # Yksikköhintojen laskennassa on hyödynnettävä kirjoitettua funktiota.
 
 import math
-ekapizza = False
 
 def pizzahinta(hintaf, halkaisijaf):
     pizzakoko = ((halkaisijaf / 200) ** 2) * math.pi
@@ -16,9 +15,8 @@ def pizzahinta(hintaf, halkaisijaf):
 for i in range(2):
     hinta = int(input(f'syötä {i + 1}. pizzan hinta: '))
     halkaisija = int(input(f'syötä {i + 1}. pizzan halkaisija senttimetreinä'))
-    if not ekapizza:
+    if i < 1:
         pizza1 = pizzahinta(hinta, halkaisija)
-        ekapizza = True
     else:
         pizza2 = pizzahinta(hinta, halkaisija)
 
