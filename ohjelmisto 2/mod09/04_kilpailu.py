@@ -28,13 +28,13 @@ class Auto:
 
     def kulje(self, aika):
         self.kuljettu_matka += aika * self.nopeus
-
-autot = [Auto(f"ABC-{i}", random.randint(100, 200)) for i in range(1, 11)]
+autot = []
+for i in range(10):
+    autot.append(Auto(f"ABC-{i+1}", random.randint(100, 200)))
 
 kilpailu_loppu = False
 tunnit = 0
 
-# Race loop
 while not kilpailu_loppu:
     for auto in autot:
         auto.kiihdytä(random.randint(-10, 15))
@@ -45,7 +45,6 @@ while not kilpailu_loppu:
             break
     tunnit += 1
 
-# Print the results
 print(f"\nKilpailu loppui {tunnit} tunnin jälkeen.")
 print("\n\n{:<16} {:<14} {:<20} {:<20}".format("Rekisteritunnus", "Nopeus (km/h)", "Kuljettu matka (km)", "Huippunopeus (km/h)"))
 for auto in autot:
