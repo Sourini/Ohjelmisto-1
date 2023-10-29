@@ -35,4 +35,10 @@ for i in range(2):
         ap2 = executeSQLsearch(sql, icaoList)
 
 
-print(geodesic(ap1, ap2).kilometers)
+matka = geodesic(ap1, ap2).kilometers
+
+totalAika = matka / 700
+
+co2Päästöt = totalAika * 2.43 * 3150
+
+print(f'käytit {co2Päästöt}kg hiilidioksidia')
