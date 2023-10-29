@@ -13,31 +13,41 @@
 import random
 
 class Auto:
+    def __init__(self, rekisteritunnus, huippunopeus):
+        self.rekisteritunnus = rekisteritunnus
+        self.huippunopeus = huippunopeus
+        self.nopeus = 0
+        self.kuljettu_matka = 0
 
-    nopeus = 0
-    kuljettu_matka = 0
-    aika = 0
+    def kiihdytä(self, nm):
+        self.nopeus = self.nopeus + nm
+        if self.nopeus > self.huippunopeus:
+            self.nopeus = self.huippunopeus
+        if self.nopeus < 0:
+            self.nopeus = 0
 
-    def __init__(self, rt, hn):
-        self.rt = rt
-        self.hn = hn
+    def kulje(self, aika):
+        self.kuljettu_matka += aika * self.nopeus
 
-    def kiihdytä(self):
-        Auto.nopeus = Auto.nopeus + random.randint(-10, 15)
-        if Auto.nopeus > self.hn:
-            Auto.nopeus = self.hn
-        if Auto.nopeus < 0:
-            Auto.nopeus = 0
-        Auto.kuljettu_matka = Auto.kuljettu_matka + Auto.nopeus
+autot = [Auto(f"ABC-{i}", random.randint(100, 200)) for i in range(1, 11)]
 
+kilpailu_loppu = False
+tunnit = 0
 
+# Race loop
+while not kilpailu_loppu:
+    for auto in autot:
+        auto.kiihdytä(random.randint(-10, 15))
+        auto.kulje(1)
+    for auto in autot:
+        if auto.kuljettu_matka >= 10000:
+            kilpailu_loppu = True
+            break
+    tunnit += 1
 
-lista = []
-
-
-for i in range(10):
-    numero = random.randint(100, 200)
-    autojuttu = Auto(f'ABC-{i}', numero)
-    lista.append(autojuttu.kiihdytä())
-
+# Print the results
+print(f"\nKilpailu loppui {tunnit} tunnin jälkeen.")
+print("\n\n{:<16} {:<14} {:<20} {:<20}".format("Rekisteritunnus", "Nopeus (km/h)", "Kuljettu matka (km)", "Huippunopeus (km/h)"))
+for auto in autot:
+    print("{:<16} {:<14} {:<20} {:<20}".format(auto.rekisteritunnus, auto.nopeus, auto.kuljettu_matka, auto.huippunopeus))
 
