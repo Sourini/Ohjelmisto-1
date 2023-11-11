@@ -1,0 +1,9 @@
+const first = parseInt(prompt('Enter the first number: '))
+const second = parseInt(prompt('Enter the second number: '))
+const third = parseInt(prompt('Enter the third number: '))
+const sum = first + second + third
+const product = first * second * third
+const average = (first + second + third) / 3
+document.querySelector('#sum').innerHTML = 'The sum of the given numbers is ' + sum;
+document.querySelector('#product').innerHTML = 'The product of the given numbers is ' + product;
+document.querySelector('#average').innerHTML = 'The average of the given numbers is ' + average;
