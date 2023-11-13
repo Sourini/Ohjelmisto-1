@@ -1,6 +1,6 @@
 the_amount = parseInt(prompt('Enter a number of participants: '))
 
-let participant_list = [];
+const participant_list = [];
 
 for (let i = 0; i < the_amount; i++) {participant_list.push(prompt('Enter the name of the participant: '))}
 

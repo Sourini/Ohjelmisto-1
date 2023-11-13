@@ -1,4 +1,4 @@
-dice_list = []
+const dice_list = []
 let return_value = 0
 
 function dice_throw(){

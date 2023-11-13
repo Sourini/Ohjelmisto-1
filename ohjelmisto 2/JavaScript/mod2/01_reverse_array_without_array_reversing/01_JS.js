@@ -1,4 +1,4 @@
-let number_list = [];
+const number_list = [];
 
 for (let i = 0; i < 5; i++) {number_list.push(parseInt(prompt('Enter a number: ')))}
 

@@ -1,5 +1,5 @@
 let looper = 1
-let number_list = []
+const number_list = []
 let number = 0
 
 while (looper != 0) {
