@@ -1,5 +1,5 @@
 let number = 1
-let number_list = []
+const number_list = []
 
 while (number != 0) {number = parseInt(prompt('enter a number. quit entering numbers by entering 0'))
     number_list.push(number)}

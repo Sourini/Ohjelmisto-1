@@ -1,4 +1,4 @@
-let participant_list = [];
+const participant_list = [];
 
 for (let i = 0; i < 6; i++) {participant_list.push(prompt('Enter the name of the dog: '))}
 
